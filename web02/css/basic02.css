@@ -1,0 +1,117 @@
+/* 전체 선택자 */
+* { color: red; }
+
+/* 태그 선택자 */
+h1 { text-align: center;}
+h2, h3 { text-align: center;}
+
+/* 아이디 선택자 */
+#main { background-color: beige; }
+
+/* 클래스 선택자 */
+.content { background-color: ivory; }
+
+/* 자손 선택자 */
+ul > li { font-weight: bold; color: black; }
+
+/* 후손 선택자 */
+ul span { color: gray; }
+
+/* 동위 선택자 */
+.dt-title1 + dd {
+    color: blue;
+}
+
+.dt-title2 ~ dd {
+    color: green;
+}
+
+/* 속성 선택자 */
+a[href] {
+    color: brown;
+}
+a[href="#"] {
+    color: black;
+}
+a[href~="naver.com"] {
+    color: rgb(0, 218, 0);
+}
+a[href|="ko"] {
+    color: cornflowerblue;
+}
+a[href^="first"] {
+    color: darkorange;
+}
+a[href$="end"] {
+    color: darkseagreen;
+}
+a[href*="-string-"] {
+    color: lightpink;
+}
+
+/* Pseudo Class - 의사 클래스 */
+div > * {
+    background-color: white; color: black;
+}
+div > :active {
+    background-color: black; color: white;
+}
+div > :checked {
+    margin: 10px; 
+}
+div > :disabled {
+    background-color: yellowgreen; color: white;
+}
+div > :empty {
+    background-color: beige; color: black;
+}
+div > :enabled {
+    background-color: burlywood; color: black;
+}
+div > :hover {
+    background-color: cadetblue; color: white;
+}
+div > :focus {
+    background-color: chartreuse; color: black;
+}
+
+/* odd(홀수), even(짝수), An+B An은 A의 배수 / +B 배수의 +B 값 */
+.nth-child-ul > li:nth-child(3n+1) {
+    background-color: darkorange; color:black;
+}
+.nth-of-type-ul > li:nth-of-type(even) {
+    background-color: darksalmon; color:black;
+}
+
+/* 필수 입력 속성이 있는 입력 양식 */
+input:required {
+    background-color: deepskyblue; color: black;
+}
+
+/* Pseudo Elements - 의사 요소 */
+/* ::after */
+.af::after {
+    content: "(인)";
+}
+/* ::before */
+.bf::before {
+    content: "서명:";
+}
+/* ::first-letter */
+.context::first-letter {
+    font-size: 24pt;
+    font-weight: bold;
+}
+/* ::first-line */
+.context::first-line {
+    background-color: lightcoral;
+}
+/* ::marker */
+::marker {
+    color: limegreen;
+}
+/* ::selection */
+::selection {
+    background-color: lightcyan;
+    color: darkblue;
+}
