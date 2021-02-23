@@ -1,0 +1,61 @@
+html {
+    font-size: 20px;
+    font-family: "맑은 고딕", "Courier New", Courier, monospace;
+}
+
+h1 { font-size: 5rem; }
+h2 { font-size: 4rem; }
+h3 { font-size: 3rem; }
+h4 { font-size: 2.5rem; }
+h5 { font-size: 2rem; }
+h6 { font-size: 1.5rem; }
+
+.shadow {
+    text-shadow: 8px 8px 5px rgb(92, 92, 92);
+}
+.shadow-center {
+    text-shadow: 8px 8px 5px rgb(92, 92, 92);
+    text-align: center;
+}
+.shadow-right {
+    text-shadow: 8px 8px 5px rgb(92, 92, 92);
+    text-align: right;
+}
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+p {
+    color: rgb(92, 92, 92);
+    /* letter-spacing: 5px; */
+    /* word-spacing: 5px; */
+    /* white-space: pre-wrap; */
+}
+.text-indent {
+    text-indent: 50px;
+}
+.line-height {
+    line-height: 50px;
+}
+.width-100 {
+    width: 100px;
+    background-color: beige;
+}
+.text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+a {
+    color: rgb(129, 207, 255);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(44, 174, 255);
+    font-weight: bolder;
+}
+ol {
+    list-style-position: inside;
+}
+.list-img {
+    list-style-image: url("/web02/img/불릿이미지.png");
+}
