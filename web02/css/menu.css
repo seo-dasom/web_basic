@@ -1,0 +1,36 @@
+* {
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16pt; font-family: "맑은 고딕", "Courier New", Courier, monospace;
+}
+.menu {
+    list-style-type: none;
+}
+.v-menu .menu {
+    background-color: lightyellow;
+}
+.h-menu .menu {
+    background-color: lightgray;
+    overflow: hidden;
+}
+.h-menu .menu-item {
+    float: left;
+}
+.v-menu .item-link {
+    display: block;
+    padding: 12px 6px;
+}
+.h-menu .item-link {
+    display: inline-block;
+    padding: 12px 24px;
+}
+.menu .item-link {
+    text-decoration: none;
+    color: black;
+}
+.menu-item .item-link:hover {
+    background-color: black;
+    color: white;
+}
