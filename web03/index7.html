@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수</title>
+</head>
+<body>
+    <h1>문제 1번</h1>
+    <p>아래의 입력 양식에 숫자값을 입력하시오.(여러 값을 입력할 때는 공백을 구분자로 입력)</p>
+    <input id="args1" type="text">
+    <h3 onclick="innerHTML = sum(document.getElementById('args1').value.split(' '));">클릭하면 모든 정수의 합을 구한다.</h3>
+
+    <h1>문제 2번</h1>
+    <p>아래의 입력 양식에 문자열을 입력하시오.</p>
+    <input id="arg2" type="text">
+    <h3 id="res2" onclick="innerHTML = passCheck(document.getElementById('arg2').value)">클릭하세요.</h3>
+
+    <h1>문제 3번</h1>
+    <p>아래의 입력 양식에 실수값을 입력하시오.</p>
+    <input id="arg3" type="text">
+    <h3 id="res3" onclick="innerHTML = round(document.getElementById('arg3').value, 2)">클릭하세요.</h3>
+</body>
+<script type="text/javascript">
+/*
+    1. 가변인자를 사용하여 총 합을 구하는 함수 작성
+*/
+function sum(x) {
+    // x의 값이 배열이면 x를 arguments로 할당
+    if (Array.isArray(x)) { arguments = x; }
+    let tot = 0;
+    for(n of arguments) {
+        tot += parseInt(n);
+    }
+    return tot;
+}
+/*
+    2. 패스워드가 영문자 대/소문자의 조합으로 되어 있는지 확인하는 함수 작성
+*/
+function passCheck(password) {
+    let upper = false; let lower = false;
+
+    for (let i = 0; i < password.length; i++) {
+        let code = password[i].charCodeAt();
+        if (code >= 65 && code <= 90) {
+            upper = true;
+        }
+        if (code >= 97 && code <= 122) {
+            lower = true;
+        }
+    }
+
+    if (upper && lower) {
+        return true;
+    } else {
+        return false;
+    }
+}
+/*
+    3. 실수값과 자릿수 값을 인자로 전달 받아 지정된 자릿수 까지의 반올림 계산을 수행하는 함수 작성
+*/
+function round(float, point) {
+    point = Math.pow(10, parseInt(point));
+    return Math.round(parseFloat(float) * point) / point;
+}
+</script>
+</html>
