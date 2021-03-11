@@ -1,0 +1,50 @@
+.container {
+    margin: 1rem 4rem;
+}
+
+.bg-color-gray {
+    background-color: gray;
+}
+
+.bg-color-gray * {
+    color: white;
+}
+
+.bg-color-gray *:hover {
+    background-color: #a1a1a1;
+}
+
+.bg-color-gray .active {
+    background-color: #a1a1a1;
+}
+
+.under-line {
+    border-bottom: 1px solid black;
+}
+
+select {
+    margin: 1rem 0;
+    padding: 0.25rem 0.5rem;
+}
+
+.code p {
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.code p.html {
+    background-color: #b62757;
+    color: #ffecec;
+}
+
+.code p.js {
+    background-color: #f1a634;
+    color: #fff7e2;
+}
+
+.code p.jquery {
+    background-color: #5b59e4;
+    color: #ffecec;
+}

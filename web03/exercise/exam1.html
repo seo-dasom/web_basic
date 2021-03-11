@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link type="text/css" rel="stylesheet" href="/web03/css/init.css">
+    <link type="text/css" rel="stylesheet" href="/web03/css/layout.css">
+    <link type="text/css" rel="stylesheet" href="/web03/css/navigation.css">
+    <script type="text/javascript" src="/web03/js/exercise.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <ul class="top-nav-menu bg-color-gray">
+                <li class="top-nav-item"><a href="#">로고</a></li>
+                <li class="top-nav-item"><a href="#">HTML</a></li>
+                <li class="top-nav-item"><a href="#">CSS</a></li>
+                <li class="top-nav-item active"><a href="#">JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <h1 class="under-line">활용 1</h1>
+        <p>선택박스로 현재년 부터 ~ 1970년 까지의 옵션 생성하기.</p>
+        <article class="exercise">
+            <select id="exec1" onfocus="exercise1(this);">
+                <option value="year">년도</option>
+            </select>
+        </article>
+        <article class="code">
+            <p class="html">
+&lt;select id="exec1" onfocus="exercise1(this);">
+    &lt;option value="year">년도&lt;/option>
+&lt;/select>
+            </p>
+            <p class="js">
+function exercise1(node) {
+    let date = new Date();
+    if (node.children.length <= 1) {
+        for(let year = date.getFullYear(); year >= 1970; year--) {
+            let option = document.createElement("option");
+            option.setAttribute("value", year);
+            option.innerText = year;
+            node.appendChild(option);
+        }
+    }
+}
+            </p>
+            <p class="jquery">
+function exercise1(node) {
+    let date = new Date();
+    if (node.children.length <= 1) {
+        for(let year = date.getFullYear(); year >= 1970; year--) {
+            let option = $("&lt;option>&lt;/option>")
+            option.attr("value", year);
+            option.text(year);
+            $("#"+node.id).append(option);
+        }
+    }
+}
+            </p>
+        </article>
+    </section>
+</body>
+</html>

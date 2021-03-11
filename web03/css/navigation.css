@@ -1,0 +1,41 @@
+.top-nav-menu {
+    overflow: hidden;
+}
+
+.top-nav-menu li {
+    float: left;
+}
+
+.top-nav-menu a {
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+.list li a {
+    display: inline-block;
+    padding: 0.25rem 0;
+    color: #5ca3ff;
+}
+
+.list li:hover {
+    background-color: lightgray;
+}
+
+ol.list-main {
+    counter-reset: count;
+}
+
+.list ol.list-main > li::before {
+    content: counter(count) ". ";
+    counter-increment: count;
+}
+
+ol.list-sub {
+    counter-reset: count;
+    margin-left: 2rem;
+}
+
+.list ol.list-sub > li::before {
+    content: counters(count, "-") ". ";
+    counter-increment: count;
+}
