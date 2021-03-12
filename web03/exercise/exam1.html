@@ -6,17 +6,20 @@
     <link type="text/css" rel="stylesheet" href="/web03/css/init.css">
     <link type="text/css" rel="stylesheet" href="/web03/css/layout.css">
     <link type="text/css" rel="stylesheet" href="/web03/css/navigation.css">
+    <link type="text/css" rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/ocean.min.css">
     <script type="text/javascript" src="/web03/js/exercise.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
 </head>
 <body>
     <header>
         <nav class="top-nav">
             <ul class="top-nav-menu bg-color-gray">
                 <li class="top-nav-item"><a href="#">로고</a></li>
-                <li class="top-nav-item"><a href="#">HTML</a></li>
-                <li class="top-nav-item"><a href="#">CSS</a></li>
-                <li class="top-nav-item active"><a href="#">JavaScript</a></li>
+                <li class="top-nav-item"><a href="/web03/HTML.html">HTML</a></li>
+                <li class="top-nav-item"><a href="/web03/CSS.html">CSS</a></li>
+                <li class="top-nav-item active"><a href="/web03/index.html">JavaScript</a></li>
             </ul>
         </nav>
     </header>
@@ -34,6 +37,8 @@
     &lt;option value="year">년도&lt;/option>
 &lt;/select>
             </p>
+        </article>
+        <article class="code">
             <p class="js">
 function exercise1(node) {
     let date = new Date();
@@ -47,7 +52,9 @@ function exercise1(node) {
     }
 }
             </p>
-            <p class="jquery">
+        </article>
+        <pre>
+            <code class="js">
 function exercise1(node) {
     let date = new Date();
     if (node.children.length <= 1) {
@@ -59,8 +66,9 @@ function exercise1(node) {
         }
     }
 }
-            </p>
-        </article>
+            </code>
+        </pre>
     </section>
 </body>
+<script>hljs.highlightAll();</script>
 </html>
