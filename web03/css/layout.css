@@ -2,20 +2,20 @@
     margin: 1rem 4rem;
 }
 
-.bg-color-gray {
-    background-color: gray;
+.bg-color-blue {
+    background-color: rgb(138, 170, 240);
 }
 
-.bg-color-gray * {
+.bg-color-blue * {
     color: white;
 }
 
-.bg-color-gray *:hover {
-    background-color: #a1a1a1;
+.bg-color-blue *:hover {
+    background-color: #3f92f0;
 }
 
-.bg-color-gray .active {
-    background-color: #a1a1a1;
+.bg-color-blue .active {
+    background-color: #3f92f0;
 }
 
 .under-line {

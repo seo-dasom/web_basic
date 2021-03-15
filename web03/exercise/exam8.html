@@ -19,52 +19,47 @@
                 <li class="top-nav-item"><a href="/web03/Logo.html">로고</a></li>
                 <li class="top-nav-item"><a href="/web03/HTML.html">HTML</a></li>
                 <li class="top-nav-item"><a href="/web03/CSS.html">CSS</a></li>
-                <li class="top-nav-item active"><a href="/web03/index.html">JavaScript</a></li>
+                <li class="top-nav-item active"><a href="/web03/Main.html">JavaScript</a></li>
             </ul>
         </nav>
     </header>
     <section class="container">
-        <h1 class="under-line">활용 1</h1>
-        <p>선택박스로 현재년 부터 ~ 1970년 까지의 옵션 생성하기.</p>
+        <h1 class="under-line">활용 8</h1>
+        <p>선택박스로 현재년에서 -20년 까지 생성 후 마지막 년도를 선택할 때 추가로 -10년 생성하기.</p>
         <article class="exercise">
-            <select id="exec1" onfocus="exercise1(this);">
+            <select id="exec8" onfocus="exercise8(this);">
                 <option value="year">년도</option>
             </select>
         </article>
         <article class="code">
             <p class="html">
-&lt;select id="exec1" onfocus="exercise1(this);">
+&lt;select id="exec8" onfocus="exercise8(this);">
     &lt;option value="year">년도&lt;/option>
 &lt;/select>
             </p>
         </article>
-        <article class="code">
-            <p class="js">
-function exercise1(node) {
-    let date = new Date();
-    if (node.children.length <= 1) {
-        for(let year = date.getFullYear(); year >= 1970; year--) {
-            let option = document.createElement("option");
-            option.setAttribute("value", year);
-            option.innerText = year;
-            node.appendChild(option);
-        }
-    }
-}
-            </p>
-        </article>
         <pre>
             <code class="js">
-function exercise1(node) {
+function exercise8(node) {
     let date = new Date();
     if (node.children.length <= 1) {
-        for(let year = date.getFullYear(); year >= 1970; year--) {
+        for(let year = date.getFullYear(); year > date.getFullYear() - 20; year--) {
             let option = $("&lt;option>&lt;/option>")
             option.attr("value", year);
             option.text(year);
-            $("#"+node.id).append(option);
+            $(node).append(option);
         }
     }
+    $(node).on('change', function() {
+        if ($(this).children().last().val() == $(this).val()) {
+            for(let year = $(this).val() - 1; year > $(this).val() - 11; year--) {
+                let option = $("&lt;option>&lt;/option>")
+                option.attr("value", year);
+                option.text(year);
+                $(this).append(option);
+            }
+        }
+    });
 }
             </code>
         </pre>

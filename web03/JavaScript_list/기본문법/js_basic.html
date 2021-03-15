@@ -24,50 +24,23 @@
         </nav>
     </header>
     <section class="container">
-        <h1 class="under-line">활용 1</h1>
-        <p>선택박스로 현재년 부터 ~ 1970년 까지의 옵션 생성하기.</p>
-        <article class="exercise">
-            <select id="exec1" onfocus="exercise1(this);">
-                <option value="year">년도</option>
-            </select>
-        </article>
+        <h1 class="under-line">기본문법</h1>
+        <p><i>JavaScript</i>는 <b>대소문자를 구별</b>하며 <strong>유니코드</strong> 문자셋을 이용합니다. 따라서 다음과 같은 코드도 유효합니다.<br>
+        <i>JavaScript</i>에서는 명령을 <b>명령문(statement)</b>이라고 부르며, <b>세미콜론(;)</b>으로 구분합니다.</p><br>
         <article class="code">
             <p class="html">
-&lt;select id="exec1" onfocus="exercise1(this);">
-    &lt;option value="year">년도&lt;/option>
-&lt;/select>
-            </p>
-        </article>
-        <article class="code">
-            <p class="js">
-function exercise1(node) {
-    let date = new Date();
-    if (node.children.length <= 1) {
-        for(let year = date.getFullYear(); year >= 1970; year--) {
-            let option = document.createElement("option");
-            option.setAttribute("value", year);
-            option.innerText = year;
-            node.appendChild(option);
-        }
-    }
+&lt;<b>변수 선언 - let></b>
+
+let name;
+name = "banana";
+
+&lt;<b>상수 선언 - const></b>
+
+const onShowModal = () => {
+	....
 }
             </p>
         </article>
-        <pre>
-            <code class="js">
-function exercise1(node) {
-    let date = new Date();
-    if (node.children.length <= 1) {
-        for(let year = date.getFullYear(); year >= 1970; year--) {
-            let option = $("&lt;option>&lt;/option>")
-            option.attr("value", year);
-            option.text(year);
-            $("#"+node.id).append(option);
-        }
-    }
-}
-            </code>
-        </pre>
     </section>
 </body>
 <script>hljs.highlightAll();</script>
