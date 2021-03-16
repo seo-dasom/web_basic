@@ -18,7 +18,7 @@
 }
 
 .list li:hover {
-    background-color: lightgray;
+    background-color: rgb(226, 219, 153);
 }
 
 ol.list-main {
