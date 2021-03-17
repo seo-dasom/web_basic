@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+    <script>
+        function testClick() {
+           window.alert('클릭하였음');
+        }
+        function c_text(node) {
+            var c1 = node.getElementsByTagName('td')[0];
+            var c2 = node.getElementsByTagName('td')[1];
+            var c3 = node.getElementsByTagName('td')[2];
+            document.getElementById('num').innerText = c1.innerText;
+            document.getElementById('text').innerText = c2.innerText;
+            document.getElementById('name').innerText = c3.innerText;
+        }
+    </script>
+</head>
+<body onload="console.log('문서 읽어들이기 완료');">
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+        </tr>
+        <tr onclick="c_text(this)";>
+            <td>1</td>
+            <td>첫 번째 게시물 입니다</td>
+            <td>홍길동</td>
+        </tr>
+        <tr onclick="c_text(this)";>
+            <td>2</td>
+            <td>두 번째 게시물 입니다</td>
+            <td>홍길동</td>
+        </tr>
+        <tr onclick="c_text(this)";>
+            <td>3</td>
+            <td>세 번째 게시물 입니다</td>
+            <td>홍길동</td>
+        </tr>
+    </table>
+    <div>선택한 게시물 : 
+        <span id="num"></span>/<span id="text"></span>/<span id="name"></span>
+    </div>
+    <button id="btn1" onclick="testClick();">확인</button>
+</body>
+</html>

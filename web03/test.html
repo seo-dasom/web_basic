@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script>
+        function copy() {
+            let copy_btn = document.getElementById('origin-a').cloneNode(true);
+            document.getElementById('copy-b').appendChild(copy_btn)
+        }
+    </script>
+</head>
+<style>
+    .div_box { width: 200px; height: 200px; background-color: orangered;}
+</style>
+<body>
+    <div class="div_box" id="origin-a">
+        <button onclick="copy();">복사하기</button>
+        <button onclick="this.parentNode.remove();">삭제하기</button>
+    </div>
+    <div id="copy-b"></div>
+</body>
+</html>
